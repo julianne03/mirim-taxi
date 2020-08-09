@@ -223,7 +223,18 @@ class Page1 extends StatelessWidget {
   }
 
   _buildBottom() {
-    return Text('Bottom');
+    final items = List.generate(10, (i) {
+      return ListTile(
+        leading: Icon(Icons.notifications),
+        title: Text('${i+1} '+' [이벤트] !!공지사항입니다!!'),
+      );
+    });
+
+    return ListView(
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: items,
+    );
   }
 }
 class Page2 extends StatelessWidget {
