@@ -96,12 +96,25 @@ class Page2 extends StatelessWidget {
 class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Text(
-          '내 정보',
-          style: TextStyle(fontSize: 40),
-        )
+    return Column(
+      children: <Widget>[
+        _buildTop(),
+        _bulidMiddle(),
+        _buildBottom(),
+
+      ],
     );
+  }
+  _buildTop() {
+    return Text('Top');
+  }
+
+  _bulidMiddle() {
+    return Text('Middle');
+  }
+
+  _buildBottom() {
+    return Text('Bottom');
   }
 }
 
