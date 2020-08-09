@@ -2,11 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 final dummyItems = [
-  'https://www.e-mirim.hs.kr/upload/board/1594343071091.JPG',
-  'https://www.e-mirim.hs.kr/upload/board/1594343071094.JPG',
-  'https://www.e-mirim.hs.kr/upload/board/1594343071098.JPG',
-  'https://www.e-mirim.hs.kr/upload/board/1594343071100.JPG',
-  'https://www.e-mirim.hs.kr/upload/board/1594343071104.JPG',
+  'https://http.cat/100',
+  'https://http.cat/200',
+  'https://http.cat/300',
+  'https://http.cat/400',
+  'https://http.cat/500',
 ];
 
 
@@ -199,7 +199,7 @@ class Page1 extends StatelessWidget {
   Widget _buildMiddle() {
     return CarouselSlider(
       options: CarouselOptions(
-        height: 150.0,
+        height: 500.0,
         autoPlay: true,
       ),
       items: dummyItems.map((url) {
