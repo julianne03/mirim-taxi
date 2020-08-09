@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MIRIM TAXI',
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-        primaryColor: Colors.white,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: Colors.lightBlueAccent,
       ),
       home: MyHomePage(),
     );
@@ -32,11 +30,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text("복잡한 UI",
-          style: TextStyle(color:Colors.black),
-        ),
+        title: Text("복잡한 UI"),
         centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.more_vert,color: Colors.black),
+            onPressed: (){},
+          )
+        ],
       ),
       body: Center(
         child: Text(
