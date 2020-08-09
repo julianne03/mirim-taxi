@@ -74,12 +74,126 @@ class _MyHomePageState extends State<MyHomePage> {
 class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-          '홈 페이지',
-          style: TextStyle(fontSize: 40),
-      )
+
+    return Column(
+      children: <Widget>[
+        _buildTop(),
+        _buildMiddle(),
+        _buildBottom(),
+      ],
     );
+
+  }
+  _buildTop() {
+    return Padding(
+      padding: const EdgeInsets.only(top:20,bottom: 20),
+      child: Column(
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              GestureDetector(
+                onTap: (){
+                  print('클릭');
+                },
+                child: Column(
+                  children: <Widget>[
+                    Icon(
+                      Icons.local_taxi,
+                      size:40,
+                    ),
+                    Text('택시'),
+                  ],
+                ),
+              ),
+              Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size:40,
+                  ),
+                  Text('블랙'),
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size:40,
+                  ),
+                  Text('바이크'),
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size:40,
+                  ),
+                  Text('대리'),
+                ],
+              ),
+            ],
+          ),
+          SizedBox(
+            height:20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size:40,
+                  ),
+                  Text('택시'),
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size:40,
+                  ),
+                  Text('블랙'),
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  Icon(
+                    Icons.local_taxi,
+                    size:40,
+                  ),
+                  Text('바이크'),
+                ],
+              ),
+              Opacity(
+                opacity: 0.0,
+                child: Column(
+                  children: <Widget>[
+                    Icon(
+                      Icons.local_taxi,
+                      size: 40,
+                    ),
+                    Text('대리'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+        ],
+      ),
+    );
+  }
+
+  _buildMiddle() {
+    return Text('Middle');
+  }
+
+  _buildBottom() {
+    return Text('Bottom');
   }
 }
 class Page2 extends StatelessWidget {
@@ -96,25 +210,12 @@ class Page2 extends StatelessWidget {
 class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        _buildTop(),
-        _bulidMiddle(),
-        _buildBottom(),
-
-      ],
+    return Center(
+      child:Text(
+      '내 정보',
+      style: TextStyle(fontSize: 40),
+      )
     );
-  }
-  _buildTop() {
-    return Text('Top');
-  }
-
-  _bulidMiddle() {
-    return Text('Middle');
-  }
-
-  _buildBottom() {
-    return Text('Bottom');
   }
 }
 
